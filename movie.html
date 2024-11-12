@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+    <header>
+        <h1>Movie App</h1>
+        <input type="text" id="movie-search" placeholder="Find a movie..." oninput="initiateMovieSearch()">
+        <select id="sort-select" onchange="applySortOrder()">
+            <option value="popularity.desc">By Popularity</option>
+            <option value="release_date.desc">By Release Date</option>
+            <option value="vote_average.desc">By Rating</option>
+        </select>
+    </header>
+    <section id="movie-display-grid"></section>
+    
+    <div id="movie-info-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal-btn" class="close" onclick="hideModal()">&times;</span>
+            <h2 id="movie-name"></h2>
+            <p id="movie-details"></p>
+            <p id="movie-metrics"></p>
+            <button id="add-watchlist-btn">Add to Watchlist</button>
+        </div>
+    </div>
+
+    <section id="saved-watchlist">
+        <h2>Your Watchlist</h2>
+        <div id="watchlist-container"></div>
+    </section>
+
+    <script src="movie.js"></script>
+</body>
+</html>

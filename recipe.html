@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Finder</h1>
+        <input type="text" id="search-bar" placeholder="Search recipes..." oninput="fetchRecipes()">
+    </header>
+    
+    <section id="recipe-list"></section>
+
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="recipe-name"></h2>
+            <p id="ingredients-list"></p>
+            <p id="instructions"></p>
+            <button id="save-favorite-btn">Save to Favorites</button> <!-- Ensure the ID is correct -->
+        </div>
+    </div>
+
+    <section id="saved-favorites">
+        <h2>Your Saved Recipes</h2>
+        <div id="favorite-recipes"></div>
+    </section>
+
+    <script src="recipe.js"></script>
+</body>
+</html>
+
+
